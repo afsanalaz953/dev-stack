@@ -1,6 +1,7 @@
-import { use } from "react";
+import { use, useState } from "react";
 import type { IProducts } from "../types";
 import { FaRegStar } from "react-icons/fa";
+import { LuDelete } from "react-icons/lu";
 
 interface IProductsProps {
   usersPromise: Promise<IProducts[]>;
@@ -8,8 +9,22 @@ interface IProductsProps {
 
 const Body = ({ usersPromise }: IProductsProps) => {
   console.log(usersPromise, "typePromise");
+
+  // for button functinality
+  const [stack, setStack] = useState<IProducts[]>([])
+
   const data = use(usersPromise);
   console.log(data, "usersData");
+
+  const handleAddToStack = (newProduct: IProducts) =>{
+  console.log(newProduct, "button clicked product")
+  // setStack([...stack, newProduct])
+  setStack((prev) => [...prev, newProduct])
+  }
+
+  const handelDelete = (item: IProducts) =>{
+
+  }
 
   return (
     <div className="container mx-auto">
@@ -30,7 +45,7 @@ const Body = ({ usersPromise }: IProductsProps) => {
             alt=""
           />
        
-          <button className="bg-purple-200 rounded-2xl w-20 p-2">{newProduct.badge}</button>
+          <button className="bg-purple-200 hover:bg-purple-500  rounded-2xl w-20 p-2">{newProduct.badge}</button>
           </div>
          
           <div className="space-y-2 text-center sm:text-left">
@@ -48,8 +63,8 @@ const Body = ({ usersPromise }: IProductsProps) => {
              </div>
             
             </div>
-            <button className="border-purple-200 p-2 rounded-2xl w-50 mx-auto bg-linear-to-t from-purple-500 to-orange-500 text-white hover:border-transparent hover:bg-purple-600 hover:text-white active:bg-purple-700">
-              Add to Cart
+            <button onClick={() =>handleAddToStack(newProduct)}   className="border-purple-200 p-2 hover: bg-black rounded-2xl w-50 mx-auto bg-purple-500 text-white hover:border-transparent hover:bg-orange-600 hover:text-white active:bg-purple-700">
+              Add to Stack
             </button>
           </div>
         </div>
@@ -59,19 +74,56 @@ const Body = ({ usersPromise }: IProductsProps) => {
     {/* Right side: single card */}
     <div className="singlecard col-span-3 ">
       <div className="border-2 shadow rounded p-8 space-10 m-8">
-<img
-        className="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
-        src="/img/erin-lindford.jpg"
-        alt=""
-      />
+<h2 className="font-bold text-start text-lg">Your Stack</h2>
+<p> Selected Stack {stack.length} </p>
       <div className="space-y-2 text-center sm:text-left">
-        <div className="space-y-0.5">
-          <p className="text-lg font-semibold text-black">Erin Lindford</p>
-          <p className="font-medium text-gray-500">Product Engineer</p>
+       {stack.length === 0 ?
+       
+       (
+        <p className="text-sm text-start font-semibold text-slate-400">Stack is empty</p>
+         
+       ) : (
+        stack.map((item)=>(
+          <div key={item.name}>
+
+{/* <div className=""> */}
+ 
+  <div className="flex flex-col gap-4 h-16 w-40 p-4 border-0 shadow mt-4">
+    <div className="flex gap-4 ">
+   <span> <img
+            className="mx-auto w-10 block h-10 rounded-full sm:mx-0 sm:shrink-0"
+            src={item.icon}
+            alt=""
+          />
+          </span>
+    <div className="flex flex-col">
+  <span className="text-sm font-semibold">{item.name}</span>
+        <span className="text-xs text-slate-500">{item.category}</span>
+    </div>
+    <div>
+      <button  onClick={() =>handleDelete(item)}   <LuDelete />  </button>
+    
+    </div>
+
+
+    </div>
+ 
+      
+      </div>
+       
+
+          </div>
+        )
+      )
+       )
+  
+      }
+          
+       
+        
+
         </div>
-        <button className="border-purple-200 text-purple-600 hover:border-transparent hover:bg-purple-600 hover:text-white active:bg-purple-700">
-          Message
-        </button>
+        
       </div>
 
 
@@ -79,7 +131,7 @@ const Body = ({ usersPromise }: IProductsProps) => {
       
     </div>
   </div>
-   </div>
+  //  </div>
   );
 };
 
