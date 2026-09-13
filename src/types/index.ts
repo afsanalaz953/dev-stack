@@ -6,5 +6,6 @@ difficulty : string;
 icon :string;
 name: string;
 rating: number;
+id:string;
 
 }

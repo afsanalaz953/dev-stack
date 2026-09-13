@@ -22,9 +22,13 @@ const Body = ({ usersPromise }: IProductsProps) => {
   setStack((prev) => [...prev, newProduct])
   }
 
-  const handelDelete = (item: IProducts) =>{
+ const handleDelete = (id: string) => {
+  setStack((prev) => prev.filter((stackItem) => stackItem.id !== id));
+};
 
-  }
+const handleDeleteAll = () => {
+  setStack([]);
+};
 
   return (
     <div className="container mx-auto">
@@ -101,16 +105,16 @@ const Body = ({ usersPromise }: IProductsProps) => {
         <span className="text-xs text-slate-500">{item.category}</span>
     </div>
     <div>
-      <button  onClick={() =>handleDelete(item)}   <LuDelete />  </button>
+      <button  onClick={() =>handleDelete(item.id)} >  <LuDelete />  </button>
     
     </div>
 
 
     </div>
- 
+
       
       </div>
-       
+
 
           </div>
         )
@@ -118,7 +122,10 @@ const Body = ({ usersPromise }: IProductsProps) => {
        )
   
       }
-          
+        
+        <div>
+  <button onClick={handleDeleteAll}  className="p-4 mt-4 rounded-2xl bg-purple-200 font-bold text-orange-800">Remove All</button>
+ </div>  
        
         
 
