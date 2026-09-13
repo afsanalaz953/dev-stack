@@ -5,6 +5,7 @@ import Navbar from './components/Nav'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
 import Body from './components/Body'
+import { ToastContainer } from 'react-toastify'
 
 const usersFetch = async() =>{
 const response = await fetch("/public/data.json")
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
    <Navbar />
    <Banner />
+    <ToastContainer position="top-right" autoClose={2000} theme="colored" />
    <Body  usersPromise={usersPromise} />
    <Footer />
   </StrictMode>,

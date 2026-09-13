@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type { IProducts } from "../types";
 import { FaRegStar } from "react-icons/fa";
 import { LuDelete } from "react-icons/lu";
+import { toast } from "react-toastify";
 
 interface IProductsProps {
   usersPromise: Promise<IProducts[]>;
@@ -20,6 +21,11 @@ const Body = ({ usersPromise }: IProductsProps) => {
   console.log(newProduct, "button clicked product")
   // setStack([...stack, newProduct])
   setStack((prev) => [...prev, newProduct])
+  toast.success(`${newProduct.name} added to your stack ✅`, {
+      position: "top-right",
+      autoClose: 2000,
+  })
+  // end
   }
 
  const handleDelete = (id: string) => {
@@ -28,6 +34,13 @@ const Body = ({ usersPromise }: IProductsProps) => {
 
 const handleDeleteAll = () => {
   setStack([]);
+
+toast.success(`All Deleted  ✅`, {
+      position: "top-right",
+      autoClose: 2000,
+  })
+
+
 };
 
   return (
