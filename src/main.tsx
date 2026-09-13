@@ -6,13 +6,19 @@ import Banner from './components/Banner'
 import Footer from './components/Footer'
 import Body from './components/Body'
 
+const usersFetch = async() =>{
+const response = await fetch("/public/data.json")
+const data = await response.json()
+return data
+}
 
+const usersPromise =  usersFetch();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
    <Navbar />
    <Banner />
-   <Body />
+   <Body  usersPromise={usersPromise} />
    <Footer />
   </StrictMode>,
 )

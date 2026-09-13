@@ -1,6 +1,13 @@
+import { use } from "react";
 
+interface IProductsProps {
+usersPromise: Promise<any[]>;
+}
 
-const Body = () => {
+const Body = ({usersPromise}: IProductsProps) => {
+    console.log(usersPromise, "typePromise")
+const data = use (usersPromise)
+console.log(data,  'usersData')
     return (
         <div className="container mx-auto">
             <h2 className="text-5xl font-bold">Explore the Technologies</h2>
