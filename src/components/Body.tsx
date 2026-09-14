@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { use, useState, type Dispatch, type SetStateAction } from "react";
 import type { IProducts } from "../types";
 import { FaRegStar } from "react-icons/fa";
 import { LuDelete } from "react-icons/lu";
@@ -6,13 +6,15 @@ import { toast } from "react-toastify";
 
 interface IProductsProps {
   usersPromise: Promise<IProducts[]>;
+  stack: IProducts[];
+  setStack: Dispatch<SetStateAction<IProducts[]>>;
 }
 
-const Body = ({ usersPromise }: IProductsProps) => {
+const Body = ({ usersPromise, stack, setStack }: IProductsProps) => {
   console.log(usersPromise, "typePromise");
 
   // for button functinality
-  const [stack, setStack] = useState<IProducts[]>([])
+  // const [stack, setStack] = useState<IProducts[]>([])
 
   const data = use(usersPromise);
   console.log(data, "usersData");
@@ -50,11 +52,11 @@ toast.success(`All Deleted  ✅`, {
         Pick one technology per category to build your ideal stack.
       </p>
    
-<div className="grid grid-cols-12 gap-2 p-6 sm:gap-6 sm:py-4">
+<div className="grid grid-cols-12 gap-6 p-6 sm:gap-6 sm:py-4">
     {/* Left side: all cards grid */}
     <div className="allcards grid grid-cols-3 col-span-9 gap-2 space-y-10 p-10 ">
       {data.map((newProduct) => (
-        <div key={newProduct.name} className="border-2 shadow p-4 space-y-4 rounded ">
+        <div key={newProduct.name} className="border-0 shadow  p-4 space-y-4 rounded ">
           <div className="1st flex gap-8 justify-between">
  <img
             className="mx-auto w-10 block h-10 rounded-full sm:mx-0 sm:shrink-0"
@@ -62,7 +64,7 @@ toast.success(`All Deleted  ✅`, {
             alt=""
           />
        
-          <button className="bg-purple-200 hover:bg-purple-500  rounded-2xl w-20 p-2">{newProduct.badge}</button>
+          <button className="bg-purple-200 hover:bg-purple-500  rounded-2xl w-30 p-2">{newProduct.badge}</button>
           </div>
          
           <div className="space-y-2 text-center sm:text-left">

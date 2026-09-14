@@ -113,7 +113,7 @@
     "id": "django",
     "name": "Django",
     "category": "Backend",
-    "description": "A high-level Python web framework that encourages rapid development and clean design.",
+    "description": "A high-level Python web framework that encourages rapid development.",
     "icon": "/public/assets/django.jpg",
     "rating": 4.7,
     "difficulty": "Intermediate",
