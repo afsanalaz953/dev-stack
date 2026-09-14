@@ -1,10 +1,10 @@
-
+// import logoText from './assets/logo-text.png';
 
 const Navbar = () => {
 
     return (
         <nav className=" container mx-auto my-10 grid grid-cols-3 gap-6">
-            <div className="w-20 h-20 "><img src="/src/assets/logo-text.png" alt="" /></div>
+            <div className="w-20 h-20 "><img src= "/assets/logo-text.png" alt="" /></div>
             {/* <img src="" alt="" /> */}
             <ul className="flex font-bold gap-4">
                 <li><a href="/">Home</a></li>

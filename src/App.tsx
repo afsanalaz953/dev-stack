@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useState } from "react";
 import Navbar from './components/Nav';
 import Banner from './components/Banner';
@@ -9,7 +9,7 @@ import type { IProducts } from './types';
 import { Suspense } from 'react';
 
 const usersFetch = async() =>{
-const response = await fetch("/public/data.json")
+const response = await fetch("/data.json")
 const data = await response.json()
 return data
 }

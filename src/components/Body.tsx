@@ -1,4 +1,4 @@
-import { use, useState, type Dispatch, type SetStateAction } from "react";
+import { use,  type Dispatch, type SetStateAction } from "react";
 import type { IProducts } from "../types";
 import { FaRegStar } from "react-icons/fa";
 import { LuDelete } from "react-icons/lu";

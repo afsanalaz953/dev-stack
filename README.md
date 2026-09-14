@@ -52,4 +52,4 @@ A parent passes data to a child through props, and a child sends something back 
 
 
 Live Link
-https://resell-hub-client-eta.vercel.app
+https://silly-cascaron-423bb4.netlify.app

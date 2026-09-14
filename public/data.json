@@ -4,7 +4,7 @@
     "name": "React",
     "category": "Frontend",
     "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
-    "icon": "/public/assets/react.png",
+    "icon": "/assets/react.png",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -14,7 +14,7 @@
     "name": "PostgreSQL",
     "category": "Database",
     "description": "A powerful, open-source object-relational database system with proven reliability.",
-    "icon": "/public/assets/png-transparent-postgresql-database-logo-computer-icons-replication-software-developer-miscellaneous-blue-mammal-thumbnail.png",
+    "icon": "/assets/png-transparent-postgresql-database-logo-computer-icons-replication-software-developer-miscellaneous-blue-mammal-thumbnail.png",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "Top SQL"
@@ -24,7 +24,7 @@
     "name": "Vue.js",
     "category": "Frontend",
     "description": "An approachable, performant and versatile framework for building web user interfaces.",
-    "icon": "/public/assets/vue.png",
+    "icon": "/assets/vue.png",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Trending"
@@ -34,7 +34,7 @@
     "name": "Angular",
     "category": "Frontend",
     "description": "A platform for building mobile and desktop web applications with a full-featured toolchain.",
-    "icon": "/public/assets/angular.png",
+    "icon": "/assets/angular.png",
     "rating": 4.4,
     "difficulty": "Advanced",
     "badge": "Enterprise"
@@ -44,7 +44,7 @@
     "name": "Svelte",
     "category": "Frontend",
     "description": "A compiler that turns declarative components into highly optimized vanilla JavaScript.",
-    "icon": "/public/assets/svelte.png",
+    "icon": "/assets/svelte.png",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Rising"
@@ -54,7 +54,7 @@
     "name": "Next.js",
     "category": "Frontend",
     "description": "The React framework for production, offering hybrid static and server rendering out of the box.",
-    "icon": "/public/assets/nestjs.jpg",
+    "icon": "/assets/nextjs.jpg",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "Popular"
@@ -64,7 +64,7 @@
     "name": "TypeScript",
     "category": "Language",
     "description": "A strongly typed programming language that builds on JavaScript with static type checking.",
-    "icon": "/public/assets/typescript.jpg",
+    "icon": "/assets/typescript.jpg",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "Essential"
@@ -74,7 +74,7 @@
     "name": "Tailwind CSS",
     "category": "Styling",
     "description": "A utility-first CSS framework for rapidly building custom designs without leaving your markup.",
-    "icon": "/public/assets/tailwind_css.jpg",
+    "icon": "/assets/tailwind_css.jpg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -84,7 +84,7 @@
     "name": "Node.js",
     "category": "Backend",
     "description": "A JavaScript runtime built on Chrome's V8 engine for scalable network applications.",
-    "icon": "/public/assets/node.png",
+    "icon": "/assets/node.png",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Essential"
@@ -94,7 +94,7 @@
     "name": "Express",
     "category": "Backend",
     "description": "A fast, unopinionated, minimalist web framework for Node.js APIs and services.",
-    "icon": "/public/assets/express-js.jpg",
+    "icon": "/assets/express-js.jpg",
     "rating": 4.6,
     "difficulty": "Beginner-Friendly",
     "badge": "Classic"
@@ -104,7 +104,7 @@
     "name": "NestJS",
     "category": "Backend",
     "description": "A progressive Node.js framework for building efficient, scalable server-side applications.",
-    "icon": "/public/assets/nextjs.jpg",
+    "icon": "/assets/nestjs.jpg",
     "rating": 4.7,
     "difficulty": "Advanced",
     "badge": "Enterprise"
@@ -114,7 +114,7 @@
     "name": "Django",
     "category": "Backend",
     "description": "A high-level Python web framework that encourages rapid development.",
-    "icon": "/public/assets/django.jpg",
+    "icon": "/assets/django.jpg",
     "rating": 4.7,
     "difficulty": "Intermediate",
     "badge": "Batteries Included"

@@ -1,4 +1,4 @@
-
+// import bannerImg from '/assets/banner-stack.png';
 
 const Banner = () => {
     return (
@@ -20,7 +20,7 @@ next project.</p>
                 </div>
               
             </div>
-            <div> <img src="/src/assets/banner-stack.png" alt="" /></div>
+            <div> <img src="/assets/banner-stack.png" alt="" /></div>
         </div>
     );
 };
